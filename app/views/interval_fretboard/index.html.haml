@@ -1,7 +1,7 @@
 #num-frets.hidden
   = @num_frets
 %div
-  Root node:
+  Root note:
   - options = options_for_select(@notes.map{|note| [note, note]}, @root_note)
   = select_tag("root_note", options, id: "root-note")
 .container
