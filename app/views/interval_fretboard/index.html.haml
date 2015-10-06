@@ -1,0 +1,17 @@
+#num-frets.hidden
+  = @num_frets
+%div
+  Root node:
+  - options = options_for_select(@notes.map{|note| [note, note]}, @root_note)
+  = select_tag("root_note", options, id: "root-note")
+.container
+  .tuning
+    - (0...@num_strings).each do |s|
+      .tuning-slot
+        - options = options_for_select(@notes.map{|note| [note, note]}, @tuning[s])
+        = select_tag("tuning_string_#{s}", options, id: "open-string-#{s}")
+  .fretboard
+    - (1...@num_frets).each do |f|
+      .fret
+        - (0...@num_strings).each do |s|
+          .fret-slot{:id => "string-#{s}-fret-#{f}"}

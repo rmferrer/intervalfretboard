@@ -1,0 +1,38 @@
+// Place all the styles related to the IntervalFretboard controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+  // TOP RIGHT BOTTOM LEFT
+  margin: 50px 0px 0px 30px;
+  width: 3000px;
+}
+
+.tuning{
+  float: left;  
+  width: 40px;
+}
+
+.fretboard {
+  float: left;
+  width: 2500px;
+  margin: 0px 0px 0px 30px;
+}
+
+.fret{
+  float: left;
+}
+
+.tuning-slot {
+  padding: 6px 5px 6px 5px;
+}
+
+.fret-slot {
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid #CDCDCD;
+}
+
+.hidden {
+  display: none;
+}
